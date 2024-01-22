@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th> Model </th>
+        <th> Brand </th>
+        <th> Price </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${cars.empty}">
+        <td colspan="2"> No Cars Available </td>
+    </tr>
+    <tr th:each="car : ${cars}">
+        <td><span th:text="${car.model}"> Model </span></td>
+        <td><span th:text="${car.brand}"> Brand </span></td>
+        <td><span th:text="${car.price}"> Price </span></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
